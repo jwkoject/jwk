@@ -1,0 +1,74 @@
+
+    .head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 91%;
+        padding: 0 4.5%;
+        height: 4.29rem;
+        z-index: 100;
+        background: white;
+        opacity: 0.8;
+        -webkit-opacity:0.8;
+    }
+    .head img {
+        float: left;
+        width: 55%;
+        height: auto;
+        margin-top: 1.49rem;
+    }
+    .share {
+        float: right;
+        margin-top: 1.23rem;
+        display: block;
+        width: 1.89rem;
+        height: 1.73rem;
+        background: url("../images/share.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .mine{
+        float: right;
+        margin: 1.29rem 0 0 6%;
+        display: block;
+        width: 1.79rem;
+        height: 1.88rem;
+        background: url("../images/mine.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .container img {
+        display:block;
+        width: 91%;
+        margin: 0 auto;
+    }
+    .container {
+        margin-top: 4.29rem;
+    }
+    .box{
+        position:relative;
+        margin-bottom: 10px;
+    }
+    .title {
+        position:absolute;
+        font-size: 2.14rem;
+        color: white;
+        left:10%;
+        top: 4.76rem;
+    }
+    .momey {
+        position:absolute;
+        font-size: 0.86rem;
+        color: white;
+        left:10%;
+        top: 7.34rem;
+    }
+    .custom {
+        position:absolute;
+        font-size: 1.07rem;
+        left:7%;
+        bottom: 0.71rem;
+        padding: 0 1.19rem;
+        background:#ffd200;
+        line-height: 2.86rem;
+        border-radius: 5px;
+        font-weight: bolder;
+    }

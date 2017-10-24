@@ -1,0 +1,74 @@
+    html {
+        padding-bottom: 4.29rem;
+    }
+    .back {
+        position:fixed;
+        top:0;
+        left:0;
+        height: 3.1rem;
+        background:white;
+        width: 100%;
+        opacity: 0.8;
+    }
+    .back a{
+        display:block;
+        width: 0.95rem;
+        height: 3.1rem;
+        padding-left: 7.32%;
+        background: url(../images/left.png) 85.95% center no-repeat;
+        background-size: 33.47% 33.46%;
+    }
+    .container {
+        padding-top: 3.1rem;
+    }
+    .foot {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 91%;
+        padding: 0 4.5%;
+        height: 4.29rem;
+        z-index: 100;
+        background: white;
+        opacity: 0.8;
+        -webkit-opacity:0.8;
+    }
+    .share {
+        float: right;
+        margin-top: 1.23rem;
+        display: block;
+        width: 1.89rem;
+        height: 1.73rem;
+        background: url("../images/share.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .mine{
+        float: right;
+        margin: 1.29rem 0 0 6%;
+        display: block;
+        width: 1.79rem;
+        height: 1.88rem;
+        background: url("../images/mine.png") no-repeat;
+        background-size: 100% 100%;
+    }
+   
+    img {
+        display: block;
+        width: 91%;
+        margin: 0 auto 10px;
+    }
+    
+    .custom{
+        float: left;
+        display: block;
+        line-height: 2.86rem;
+        padding: 0 1.21rem;
+        margin-top: 0.65rem;
+        color:#000;
+        background: #ffd200;
+        border-radius: 5px;
+        font-size: 1.07rem;
+        border-radius: 10px;
+        -wibkit-border-radius:10px;
+        font-weight: bolder;
+    }

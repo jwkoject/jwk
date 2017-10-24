@@ -1,78 +1,28 @@
 var params = {};
         // 设置获取选项栏宽度
-        var win = $(window).width();
-        var leng1 = $(".picture-left-sf").children().eq(0).find(".select-sf").children().length,
-        leng2 = $(".picture-left-sf").children().eq(1).find(".select-sf").children().length,
-        leng3 = $(".picture-left-sf").children().eq(2).find(".select-sf").children().length,
-        leng4 = $(".picture-left-sf").children().eq(3).find(".select-sf").children().length,
-        leng5 = $(".picture-left-sf").children().eq(4).find(".select-sf").children().length,
-        lengW = $(".picture-left-sf").children().eq(4).find(".select-sf").children().width(),
-        lengW2 = $(".select-under-back").children().eq(2).find(".select-sfs").children().width(),
-        lengt1 = $(".select-under-sf").children().eq(0).find(".select-sfs").children().length,
-        lengt2 = $(".select-under-sf").children().eq(1).find(".select-sfs").children().length,
-        lengt3 = $(".select-under-sf").children().eq(2).find(".select-sfs").children().length,
-        lengt4 = $(".select-under-sf").children().eq(3).find(".select-sfs").children().length,
-        lengt5 = $(".select-under-back").children().eq(0).find(".select-sfs").children().length,
-        lengt6 = $(".select-under-back").children().eq(1).find(".select-sfs").children().length,
-        lengt7 = $(".select-under-back").children().eq(2).find(".select-sfs").children().length,
-        lengt8 = $(".select-under-back").children().eq(3).find(".select-sfs").children().length,
-        leng6 = $(".picture-left-sf").children().eq(5).find(".select-sf").children().length;
+        var win = $(window).width(),
+        lengW = $(".picture-left-sf").children().eq(0).find(".select-sf").children().width(),
+        lengW2 = $(".select-under-back").children().eq(0).find(".select-sfs").children().width();
         var els = null;
         console.log(win);
         if(win >= 320) {
             els = 5;
-        } else if (win >= 375) {
+        } 
+        if (win >= 375) {
             els = 12;
-        } else if (win >= 414) {
+        }
+        if (win >= 414) {
             els = 18;
         }
-        console.log(els);
-        $(".picture-left-sf").children().eq(0).find(".select-sf").css({
-            "width": leng1 * (lengW+els)
-        });
-        $(".picture-left-sf").children().eq(1).find(".select-sf").css({
-            "width": leng2 * (lengW+els)
-        });
-        $(".picture-left-sf").children().eq(2).find(".select-sf").css({
-            "width": leng3 * (lengW+els)
-        });
-        $(".picture-left-sf").children().eq(3).find(".select-sf").css({
-            "width": leng4 * (lengW+els)
-        });
-        $(".picture-left-sf").children().eq(4).find(".select-sf").css({
-            "width": leng5 * (lengW+els)
-        });
-        $(".picture-left-sf").children().eq(5).find(".select-sf").css({
-            "width": leng6 * (lengW+els)
-        });
-        $(".select-under-sf").children().eq(0).find(".select-sfs").css({
-            "width": lengt1 * (lengW2+15)
-        });
-        $(".select-under-sf").children().eq(1).find(".select-sfs").css({
-            "width": lengt2 * (lengW2+15)
-        });
-        $(".select-under-sf").children().eq(2).find(".select-sfs").css({
-            "width": lengt3 * (lengW2+15)
-        });
-        $(".select-under-sf").children().eq(3).find(".select-sfs").css({
-            "width": lengt4 * (lengW2+15)
-        });
-        $(".select-under-back").children().eq(0).find(".select-sfs").css({
-            "width": lengt5 * (lengW2+15)
-        });
-        $(".select-under-back").children().eq(1).find(".select-sfs").css({
-            "width": lengt6 * (lengW2+15)
-        });
-        $(".select-under-back").children().eq(2).find(".select-sfs").css({
-            "width": lengt7 * (lengW2+15)
-        });
-        $(".select-under-back").children().eq(3).find(".select-sfs").css({
-            "width": lengt8 * (lengW2+15)
-        });
+        console.log(els)
         // 选择分类
         $(".pic-con-sf").click(function() {
             $(this).addClass('pic-con-show').parent().parent().siblings().find(".pic-con-sf").removeClass('pic-con-show');
             $(".custom-under-list li img").removeClass('custom-under-img');
+            var leng = $(this).parent().siblings(".select-outer-sf").find(".select-sf").children().length;
+            $(this).parent().siblings(".select-outer-sf").find(".select-sf").css({
+                "width": leng * (lengW+els)
+            })
             var lef = $(this).parent().next().css("left").split("px")[0];
             console.log(lef);
             if(lef > 0) {               
@@ -150,14 +100,18 @@ var params = {};
             $(".select-outer-sf").animate({
                 "left": "10rem"
             },500);
-            if(dat==1) {
+            if(dat==1) { 
                 var lefs = $(".select-under-sf").children().eq(index).css("left").split("px")[0];
+                var lengt = $(".select-under-sf").children().eq(index).find(".select-sfs").children().length;
+                $(".select-under-sf").children().eq(index).find(".select-sfs").css({
+                    "width": lengt * (lengW2+els)
+                })
                 if(lefs >= 0) {
                     $(".select-under-sf").children().eq(index).animate({
                         "left": "-22rem"
                     },500)
                     $(this).removeClass('custom-under-img');
-                } else {                   
+                } else {                 
                     setTimeout(function() {
                         $(".select-under-sf").children().eq(index).siblings(".select-outing-sf").animate({
                             "left": "-22rem"
@@ -174,6 +128,10 @@ var params = {};
             }
             if(dat==2) {
                 var lefts = $(".select-under-back").children().eq(index).css("left").split("px")[0];
+                var lengts = $(".select-under-back").children().eq(index).find(".select-sfs").children().length;
+                $(".select-under-back").children().eq(index).find(".select-sfs").css({
+                    "width": lengts * (lengW2+els)
+                })
                 if(lefts >= 0) {
                     $(".select-under-back").children().eq(index).animate({
                         "left": "-22rem"

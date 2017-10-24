@@ -26,7 +26,7 @@ var params = {};
         } else if (win >= 414) {
             els = 18;
         }
-        console.log(els)
+        console.log(els);
         $(".picture-left-sf").children().eq(0).find(".select-sf").css({
             "width": leng1 * (lengW+els)
         });

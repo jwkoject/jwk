@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2017-10-16 14:54:01
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-10-24 14:29:38
+* @Last Modified time: 2017-10-25 17:10:27
 */
 /*定制页面样式*/
 .picture-sf {
@@ -262,23 +262,20 @@
     left: 75%;
 }
 .select-sf {
-    width: 38rem;
+    position: relative;
     height: 3rem;
-    /*-webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    border-radius: 30px;*/
-    /*background: rgba(222,225,229,0.9);*/
 }
 ::-webkit-scrollbar {/*隐藏滚轮*/
     display: none;
 }
 .select-sf li {
-    float: left;
+    position: absolute;
     overflow: hidden;
+    left: 100%;
+    top: 0;
     width: 3rem;
     height: 3rem;
-    margin-right: 0.8rem;
+    /*margin-right: 10px;*/
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;

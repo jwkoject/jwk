@@ -14,23 +14,49 @@ var params = {};
         if (win >= 414) {
             els = 18;
         }
-        console.log(els)
+        console.log(els);
         // 选择分类
+        var timer = null;
         $(".pic-con-sf").click(function() {
+            $(this).parent().siblings(".select-outer-sf").find(".select-sf").children().css({
+                "left": "999px"
+            });
+            if(timer) {
+                clearInterval(timer);
+            }
+            var startT = -1;
             $(this).addClass('pic-con-show').parent().parent().siblings().find(".pic-con-sf").removeClass('pic-con-show');
             $(".custom-under-list li img").removeClass('custom-under-img');
             var leng = $(this).parent().siblings(".select-outer-sf").find(".select-sf").children().length;
-            $(this).parent().siblings(".select-outer-sf").find(".select-sf").css({
-                "width": leng * (lengW+els)
-            })
+            var lengs = leng * (lengW+els+3);
+            if(leng < $(".select-outer-sf").width()) {
+                leng = $(".select-outer-sf").width()
+            } else {            
+                $(this).parent().siblings(".select-outer-sf").find(".select-sf").css({
+                    "width": lengs
+                })
+            }
+            var _this = this;
+            
             var lef = $(this).parent().next().css("left").split("px")[0];
-            console.log(lef);
             if(lef > 0) {               
                 $(this).parent().next().animate({
                     "left": "-15rem"
                 },500).parent().siblings().find(".select-outer-sf").animate({
                     "left": "10rem"
                 },500);
+                timer = setInterval(function() {
+                    startT++;
+                    if(startT == leng) {
+                        clearInterval(timer);
+                        // startT = -1;
+                    }
+                    var leu = startT * (15 + lengW);
+                    $(_this).parent().siblings(".select-outer-sf").find(".select-sf").children().eq(startT).animate({
+                        "left": leu
+                    },500);
+                    console.log(startT)
+                },500)
             } else {
                 $(this).removeClass('pic-con-show')
                 $(this).parent().next().animate({

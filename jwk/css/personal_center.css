@@ -1,0 +1,30 @@
+/* 
+* @Author: anchen
+* @Date:   2017-11-02 17:38:31
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-11-02 18:13:32
+*/
+.wrap {
+    padding: 0 4.63%;
+    height: 100%;
+}
+.header {
+    position: relative;
+}
+.header span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+}
+.header h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 1rem;
+    line-height: 2rem;
+}

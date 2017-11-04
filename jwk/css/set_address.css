@@ -2,8 +2,16 @@
 * @Author: anchen
 * @Date:   2017-11-02 17:39:22
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-11-03 11:26:12
+* @Last Modified time: 2017-11-04 22:31:38
 */
+input{  
+   background:none;  
+   outline:none;  
+   border:0px;  
+}
+html body {
+    height: 100%;
+}
 .wrap {
     padding: 0 4.63%;
     height: 100%;
@@ -63,3 +71,18 @@
     color: #aaaaaa;
     font-size: 1.2rem;
 } 
+.save-btn {
+    display: block;
+    position: absolute;
+    bottom: 0.62rem;
+    width: 90.74%;
+    margin: 0 1.02%;
+    background: #0c1260;
+    border-radius: 0.24rem;
+}
+.save-btn input[type="button"] {
+    width: 100%;
+    color: #fff;
+    line-height: 2.38rem;
+    text-align: center;
+}

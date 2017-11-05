@@ -1,0 +1,30 @@
+    html {
+        padding-bottom: 4.29rem;
+    }
+    .back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3.1rem;
+        background: white;
+        width: 100%;
+        opacity: 0.8;
+        text-align: center;
+        line-height: 3.1rem;
+        font-weight: bolder;
+        font-size: 1.14rem;
+        color:#000;
+    }
+    
+    .back a {
+        position:absolute;
+        left: 0;
+        top:0;
+        width: 0.95rem;
+        height: 3.1rem;
+        padding-left: 7.32%;
+        background: url(../images/left.png) 68.95% center no-repeat;
+        background-size: 33.47% 33.46%;
+    }
+    
+   

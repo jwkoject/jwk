@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/pay.css" />
-    <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
-    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
 </head>
 <body>
@@ -22,7 +21,7 @@
                 Next
             </a>
             <div class="clearfix creditCard">
-                <input type="radio" name="pay" id="creditCard" checked="" /> <label for="creditCard">Credit card</label>
+                <label for="creditCard">Credit card<input type="radio" name="pay" id="creditCard" checked="" /></label>
                 <div class="info">
                     <input type="text" class="surname" placeholder="持卡人姓"/>
                     <input type="text" class="name" placeholder="持卡人名"/>
@@ -50,16 +49,16 @@
                 </div>
             </div>
             <div class="clearfix pay">
-                <input type="radio" name="pay" id="paypal" /> <label for="paypal">Paypal</label>
+                <label for="paypal">Paypal<input type="radio" name="pay" id="paypal" /> </label>
             </div>
             <div class="clearfix pay">
-                <input type="radio" name="pay" id="apipay" /> <label for="apipay">Apipay</label>
+                <label for="apipay">Apipay<input type="radio" name="pay" id="apipay" /> </label>
             </div>
             <div class="clearfix pay">
-                <input type="radio" name="pay" id="weChat" /> <label for="weChat">WeChat Pay</label>
+                <label for="weChat">WeChat Pay<input type="radio" name="pay" id="weChat" /> </label>
             </div>
             <div class="clearfix pay">
-                <input type="radio" name="pay" id="apple" /> <label for="apple">Apple Pay</label>
+                <label for="apple">Apple Pay<input type="radio" name="pay" id="apple" /> </label>
             </div>
             <a class="next" href="###">
                 Next
@@ -71,8 +70,6 @@
     
 
 </body>
-<script type="text/javascript" src="../src/event.js"></script>
-<script type="text/javascript" src="../src/fx.js"></script>
 
 <script type="text/javascript" src="../js/pay.js"></script>
 </html>

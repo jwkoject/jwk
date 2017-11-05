@@ -44,11 +44,11 @@
     }
     .clearfix {
         overflow: hidden;
-        padding: 0 5%;
         background: #d9d9d9;
         border-radius: 0.36rem;
         margin-bottom: 0.36rem;
     }
+      
     .form .clearfix input[type="radio"] {
         float: left;
         width:1.19rem;
@@ -56,14 +56,19 @@
         margin: 1.07rem 0.64rem 0 0;
     }
     .form .clearfix label {
+        display:block;
+        padding: 0 5%;
         line-height: 3.5rem;
         font-size: 1rem;
         color:#000;
         font-weight: bolder;
     }
     .info {
+        padding: 0 5%;
+        display:block;
         overflow:hidden;
         height:12.74rem;
+        background: #d9d9d9;
     }
     .info input {
         outline: none;

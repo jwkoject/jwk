@@ -22,6 +22,7 @@ h1 {
     margin-bottom: 0.6rem;
 }
 .password-remind,.number-remind {
+    display:none;
     width: 57%;
     padding: 0.5rem 4% 0 5%;
     font-size: 0.86rem;

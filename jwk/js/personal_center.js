@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2017-11-04 21:44:19
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-11-04 22:17:32
+* @Last Modified time: 2017-11-05 18:14:52
 */
 
 $(document).ready(function(){
@@ -19,3 +19,6 @@ $(document).ready(function(){
         alert("confirm delete")
     });
 });
+$(".btn-payment").click(function() {
+    window.location.href="pay.html"
+})

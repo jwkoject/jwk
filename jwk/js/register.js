@@ -1,10 +1,9 @@
-/* 
-* @Author: anchen
-* @Date:   2017-11-05 10:38:09
-* @Last Modified by:   anchen
-* @Last Modified time: 2017-11-05 10:38:09
-*/
-
-$(document).ready(function(){
-    
-});
+$("#button").click(function(){
+    if($("#email").val() == "") {
+        $(".number-remind").slideDown();
+    }
+    if($("#psd").val()!==$("#psdcon").val()|| $("#psd").val()=="" ||$("#psdcon").val()=="") {
+        $(".password-remind").slideDown();
+    }
+    // window.location.href="register_information.html"
+})

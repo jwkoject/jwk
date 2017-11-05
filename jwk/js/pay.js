@@ -6,20 +6,18 @@ for (var i = 2017; i <= 2050; i++) {
 
 };
 
-$(".creditCard label, #creditCard").click(function(){
-    var height = $(".info").height()
-    if(height ==0) {
-        $(".info").animate({
-            "height" : "12.74rem"
-        },1000);
-    }else {
-        $(".info").animate({
-            "height" : "0"
-        },1000);
+var book = 1;
+$(".pay").click(function(){
+    $(".info").slideUp();
+    book=2
+});
+
+$("#creditCard").click(function(){
+    if(book==2) {
+        $(".info").slideDown()
+        book=1
+    } else {
+        $(".info").slideUp()
+        book=2
     }
-})
-$(".pay label, .pay input").click(function(){
-    $(".info").animate({
-       "height" : "0"
-    },1000);
-})
+});

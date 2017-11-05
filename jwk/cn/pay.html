@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/pay.css" />
-    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
 </head>
 <body>
@@ -15,8 +16,63 @@
         <a href="###"></a>
         Please select a payment method
     </div>
-    
+    <div class="wrap">
+        <form action="" class="form">
+            <a class="next" href="###">
+                Next
+            </a>
+            <div class="clearfix creditCard">
+                <input type="radio" name="pay" id="creditCard" checked="" /> <label for="creditCard">Credit card</label>
+                <div class="info">
+                    <input type="text" class="surname" placeholder="持卡人姓"/>
+                    <input type="text" class="name" placeholder="持卡人名"/>
+                    <input type="text"  placeholder="信用卡卡号" class="number" />
+                    <input type="text"  placeholder="安全码" class="code" />
+                    <h2>信用卡有效期</h2>
+                    <select name="" id="month">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="" id="year">
+                        
+                    </select>
+                    <a href="###" class="next" id="next">添加此信用卡</a>
+                </div>
+            </div>
+            <div class="clearfix pay">
+                <input type="radio" name="pay" id="paypal" /> <label for="paypal">Paypal</label>
+            </div>
+            <div class="clearfix pay">
+                <input type="radio" name="pay" id="apipay" /> <label for="apipay">Apipay</label>
+            </div>
+            <div class="clearfix pay">
+                <input type="radio" name="pay" id="weChat" /> <label for="weChat">WeChat Pay</label>
+            </div>
+            <div class="clearfix pay">
+                <input type="radio" name="pay" id="apple" /> <label for="apple">Apple Pay</label>
+            </div>
+            <a class="next" href="###">
+                Next
+            </a>
+        </form>
+        <p>or</p>
+        <a href="###" class="continue">Cancel shopping</a>
+    </div>
     
 
 </body>
+<script type="text/javascript" src="../src/event.js"></script>
+<script type="text/javascript" src="../src/fx.js"></script>
+
+<script type="text/javascript" src="../js/pay.js"></script>
 </html>

@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2017-11-02 17:39:22
 * @Last Modified by:   anchen
-* @Last Modified time: 2017-11-04 22:31:38
+* @Last Modified time: 2017-11-05 09:30:05
 */
 input{  
    background:none;  
@@ -73,10 +73,7 @@ html body {
 } 
 .save-btn {
     display: block;
-    position: absolute;
-    bottom: 0.62rem;
-    width: 90.74%;
-    margin: 0 1.02%;
+   
     background: #0c1260;
     border-radius: 0.24rem;
 }

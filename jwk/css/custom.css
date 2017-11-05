@@ -662,13 +662,210 @@ input {
 	width: 100%;
 	height: 4rem;
 }
-
-
-
-
-
-
-
+/*结算页面订单样式*/
+.settlement-sf {
+    position: fixed;
+    left: 0;
+    bottom: -30rem;
+    width: 100%;
+    /*height: 100%;*/
+    z-index: 999;
+}
+.settlement-sf-inner {
+    overflow: auto;
+    /*position: absolute;
+    left: 0;
+    bottom: 0;*/
+    /*height: 100%;*/
+    width: 90.74%;
+    padding: 0.67rem 4.63%;
+    background: #fff;
+}
+.settlement-show-inner {
+    height: 100%;
+}
+.settlement-sf-inner > div {
+    margin-bottom: 0.36rem;
+}
+.cust-address a {
+    display: block;
+    padding: 0.62rem 0 0.62rem 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background:  #f2f2f2 url("../images/arrow_left.png")  96.73% center no-repeat;
+    background-size: 4.08% auto;
+}
+.cust-address-all {
+    margin-bottom: 0.62rem;
+    font-size: 0.86rem;
+    font-weight: bold;
+}
+.cust-address-all span {
+    margin-right: 2%;
+}
+.cust-address-detail p {
+    font-size: 0.71rem;
+}
+.express-cust, .gift-card, .product-number {
+    width: 94.9%;
+    padding-left: 5.1%;
+    height: 2.38rem;
+    margin-bottom: 0.12rem;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background:  #f2f2f2 url("../images/arrow_b.png")  96.73% center no-repeat;
+    background-size: 2.24% auto;
+    line-height: 2.38rem;
+    font-size: 0.86rem;
+}
+.express-detail {
+    overflow: hidden;
+    padding: 0.62rem 0 0.62rem 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background:  #f2f2f2;
+    color: #666;
+    font-size: 0.86rem;
+}
+.invoice-cust, .gift-money {
+    height: 2.38rem;
+    padding-left: 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    line-height: 2.38rem;
+    font-size: 0.86rem;
+    background: #f2f2f2;
+}
+.form-gift, .end-price {
+    padding: 0.71rem 0 0.71rem 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background: #f2f2f2;
+}
+.number-change .number-num {
+    width: 3rem;
+}
+.form-gift input {
+    float: left;
+    width: 54.02%;
+    height: 2.38rem;
+    padding-left: 6%;
+    margin-right: 4%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    border: 0.1rem solid #9fa0a0;
+    box-sizing: border-box;
+    line-height: 2.38rem;
+    outline: none;
+}
+.gift-enter {
+    float: left;
+    width: 35.71%;
+    height: 2.38rem;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    color: #000001;
+    background: #ffd200;
+    line-height: 2.38rem;
+    text-align: center;
+    font-weight: bold;
+}
+.product-name {
+    float: left;
+}
+.product-num {
+    float: right;
+    margin-right: 8%;
+}
+.product-num i {
+    font-family: normal;
+}
+.number-change span, .number-change em {
+    float: right;
+    width: 2.14rem;
+    height: 2.14rem;
+    line-height: 2.14rem;
+    text-align: center;
+}
+.add-number {
+    margin-right: 7%;
+    background: url("../images/add_1.png")  0 center no-repeat;
+    background-size: 100% auto;
+}
+.product-number {
+    margin-bottom: 0.12rem;
+}
+.account-number {
+    background: url("../images/account.png")  0 center no-repeat;
+    background-size: 100% auto;
+}
+.price-detail {
+    padding: 0.71rem 0 0.71rem 0;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background: #f2f2f2;
+}
+.price-detail-list {
+    padding-top: 0.71rem;
+}
+.price-detail-list li {
+    overflow: hidden;
+    padding-left: 5.1%;
+    margin-bottom: 0.31rem;
+    color: #666;
+    font-size: 0.86rem;
+}
+.price-detail-list li span {
+    float: left;
+}
+.price-detail-list li em {
+    float: right;
+    margin-right: 8%;
+}
+.end-price ul li {
+    margin-bottom: 0.2rem;
+    font-size: 0.86rem;
+}
+.slide-bottom {
+    display: none;
+}
+.final-price {
+    font-weight: bold;
+}
+.final-buy a {
+    display: block;
+    width: 37%;
+    height: 2.95rem;
+    margin: 0.71rem auto 0;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background: #ffd200;
+    line-height: 2.95rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.gift-money em {
+    float: left;
+}
+.gift-money span {
+    float: right;
+    margin-right: 3%;
+}
+.gift-cust .gift-money {
+    display: none;
+    margin-top: 0.12rem;
+    color: #666;
+}
 
 
 

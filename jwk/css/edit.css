@@ -1,9 +1,4 @@
-/* 
-* @Author: anchen
-* @Date:   2017-11-02 17:39:10
-* @Last Modified by:   anchen
-* @Last Modified time: 2017-11-03 15:00:53
-*/
+
 input{  
    background:none;  
    outline:none;  
@@ -13,7 +8,7 @@ html body {
     height: 100%;
 }
 .wrap {
-    padding: 0 4.63%;
+    padding: 0 4.63% 1rem;
     height: 100%;
 }
 .header {
@@ -100,49 +95,11 @@ html body {
     color: #000000;
     font-weight: bold;
 }
-/*
-.check-main input[type="checkbox"] {
-    width: 1.19rem;
-    height: 1.19rem;
-    opacity: 0;
-}
-.check-set {
-    float: left;
-    width: 90%;
-    height: 1.52rem;
-    padding-left: 1.84%;
-    line-height: 1.52rem;
-    font-size: 0.86rem;
-    font-weight: bold;
-}
-.check-btn {
-    position: relative;
-    float: right;
-    width: 1.19rem;
-    height: 1.19rem;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    background: #e5e5e5;
-}
-.check-btn input[type="checkbox"] + span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 0.6rem;
-    height: 0.6rem;
-    margin: 0.3rem;
-    border-radius: 50%;
-}
-.check-btn input[type="checkbox"]:checked + span {
-    background: #434343;
-}*/
 
 .save-btn {
-    position: absolute;
-    bottom: 0.62rem;
-    width: 90.74%;
-    margin: 0 1.02%;
+   
+    display: block;
+   
     background: #0c1260;
     border-radius: 0.24rem;
 }

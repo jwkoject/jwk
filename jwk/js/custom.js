@@ -256,6 +256,9 @@
             $(".custom-share-bottom").animate({
                 "bottom": -heig
             },500);
+            $(".settlement-sf").animate({
+                "bottom": "-30rem"
+            })
         })
         $(".cust-price,.cust-buy").click(function() {
             animateLeft();
@@ -276,9 +279,105 @@
                 "left": "-22rem"
             },500)
         })
-        
-        
-        
+        // 点击购买结算菜单
+        $(".slide-top").click(function() {
+            var dat = $(this).attr("data");
+            var id = $(this).parent().index();
+            var heig = $(window).height();
+            var ht = $(".settlement-sf").attr("data");
+            if(id == 4) {
+                $(".settlement-sf-inner").animate({
+                    "height": heig
+                })
+            }
+            if(dat == 1) {
+                if(id == 4) {
+                    $(".settlement-sf-inner").animate({
+                        "height": heig
+                    })
+                } else {
+                    $(".settlement-sf-inner").animate({
+                        "height": ht
+                    })
+                }
+                $(this).css({
+                    "background" : '#f2f2f2 url("../images/arrow_t.png")  96.73% center no-repeat',
+                    "backgroundSize" : "2.24% auto"
+                }).parent().siblings().find(".slide-top").css({
+                    "background" : '#f2f2f2 url("../images/arrow_b.png")  96.73% center no-repeat',
+                    "backgroundSize" : "2.24% auto"
+                })
+                $(this).next().slideDown().parent().siblings().find(".slide-bottom").slideUp().siblings(".slide-top").attr("data","1");
+                $(this).attr("data","2");
+            } else {
+                $(this).next().slideUp();
+                $(this).attr("data","1");
+                $(this).css({
+                    "background" : '#f2f2f2 url("../images/arrow_b.png")  96.73% center no-repeat',
+                    "backgroundSize" : "2.24% auto"
+                })
+                $(".settlement-sf-inner").animate({
+                    "height": ht
+                })             
+            }
+        })
+        // enter
+        $(".gift-enter").click(function() {
+            $(".gift-money").slideDown();
+        })
+        $(".gift-money").click(function() {
+            $(".gift-money").slideUp();
+        })
+        $(".cust-buy").click(function() {
+            var h = $(".settlement-sf").height();
+            $(".settlement-sf").attr("data",h);
+            $(".custom-share-outer").fadeIn(500);
+            $(".settlement-sf").animate({
+                "bottom": 0
+            })
+        })
+        // 增加产品数量和价格计算
+        var arrP = [];
+        for(var i = 0; i < $(".price-detail-list li").length; i++) {
+            var priceA = $(".price-detail-list li").eq(i).children("em").text().split("$")[1];
+            arrP.push(priceA);
+        }
+        var priceAll = 0;
+        for(var j = 0; j < arrP.length; j++) {
+            priceAll += parseFloat(arrP[j]);
+        }
+        var totalC = $(".all-final-num").text().split("x")[1];
+        var allPrice = priceAll * totalC;
+        var startEnd = allPrice + parseFloat($(".postage-cust").text().split("$")[1]) - parseFloat($(".discount-cust").text().split("$")[1]);
+        $(".all-final-price").text("=$" + allPrice);
+        $(".item-price").text("$" + allPrice);
+        $(".total-cust").text("Total piece（" +totalC+ "）");
+        $(".final-price").text("$" + startEnd);
+        $(".account-number").click(function() {
+            var num = $(".number-num").text();
+            num--;
+            if(num < 1) {
+                num = 1
+            }
+            $(".number-num").text(num);
+            $(".all-final-num").text("x" + num);
+            $(".all-final-price").text("=$" + (num*priceAll).toFixed(2));
+            $(".item-price").text("$" + (num*priceAll).toFixed(2));
+            $(".total-cust").text("Total piece（" +num+ "）");
+            startEnd = num*priceAll + parseFloat($(".postage-cust").text().split("$")[1]) - parseFloat($(".discount-cust").text().split("$")[1]);
+            $(".final-price").text("$" + startEnd.toFixed(2));
+        })
+        $(".add-number").click(function() {
+            var num = $(".number-num").text();
+            num++;
+            $(".number-num").text(num);
+            $(".all-final-num").text("x" + num);
+            $(".all-final-price").text("=$" + (num*priceAll).toFixed(2));
+            $(".item-price").text("$" + (num*priceAll).toFixed(2));
+            $(".total-cust").text("Total piece（" +num+ "）");
+            startEnd = num*priceAll + parseFloat($(".postage-cust").text().split("$")[1]) - parseFloat($(".discount-cust").text().split("$")[1]);
+            $(".final-price").text("$" + startEnd.toFixed(2));
+        })
         
         
         

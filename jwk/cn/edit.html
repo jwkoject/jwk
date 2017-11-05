@@ -17,9 +17,11 @@
             <section>
                 <form action="">
                     <div class="edit-file">
-                        <label for="flie-head" class="file-label">
-                            <input type="file" id="flie-head" />
-                            <img src="../images/per_cen_11.png" alt="" />
+                        <div class="z_photo">
+                            <img id="imgfile" src="../images/per_cen_11.png" alt="" />
+                        </div>
+                        <label for="flies" class="file-label z_file">
+                            <input type="file" name="file" id="files" value="" accept="images/*" multiple  />
                             <span></span>
                         </label>
                     </div>
@@ -59,5 +61,6 @@
                 </form>
             </section>
         </div>
+        <script type="text/javascript" src="../js/edit.js"></script>
     </body>
 </html>

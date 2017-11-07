@@ -35,7 +35,7 @@ html body {
     position: relative;
     margin: 2.62rem 0 1.67rem 0;
 }
-.edit-file span {
+.edit-file label {
     position: absolute;
     left: 5.9rem;
     bottom: 0;

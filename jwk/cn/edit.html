@@ -17,13 +17,11 @@
             <section>
                 <form action="">
                     <div class="edit-file">
-                        <div class="z_photo">
-                            <img id="imgfile" src="../images/per_cen_11.png" alt="" />
-                        </div>
-                        <label for="flies" class="file-label z_file">
-                            <input type="file" name="file" id="files" value="" accept="images/*" multiple  />
-                            <span></span>
-                        </label>
+                        <div id="preview">
+                            <img id="imghead" border="0" src="../images/per_cen_11.png"onclick="$('#previewImg').click();">
+                        </div>         
+                        <span></span>
+                        <input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg">
                     </div>
                     <div class="add-main">
                         <label class="label" for="">Name</label>

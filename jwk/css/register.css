@@ -18,7 +18,14 @@ h1 {
     font-weight: bold;
     margin-bottom: 1.6rem;
 }
-.form div {
+h2 {
+    display:none;
+    text-align: center;
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 1.19rem;
+}
+.register {
     margin-bottom: 0.6rem;
 }
 .password-remind,.number-remind {
@@ -30,12 +37,19 @@ h1 {
     line-height: 1.14rem;
     border: 1px solid #d6d6d6;
     border-radius: 0.36rem;
+    margin-bottom: 0.6rem;
 }
 .box{
     overflow:hidden;
     height: 0;
 }
-.form div input {
+.page-secend {
+    display:none;
+}
+.clearfix {
+    margin-bottom: 0.95rem;
+}
+.register input {
     width: 95%;
     padding-left: 5%;
     line-height: 2.38rem;
@@ -46,7 +60,7 @@ h1 {
     font-size: 1rem;
     color: #7b7c7c;
 }
-.form div button {
+.register button {
     width: 100%;
     line-height: 2.38rem;
     background: #0c1260;
@@ -94,3 +108,80 @@ p {
     color: #0c1260;
     font-weight: bolder;
 }
+.info input[type="text"] {
+    width: 75%;
+    padding-left: 5%;
+    line-height: 2.38rem;
+    outline: none;
+    border-radius: 0.36rem;
+    background: #d9d9d9;
+    border:none;
+    font-size: 1rem;
+    color: #7b7c7c;
+}
+select {
+    float: right;
+    width: 18.37%;
+    padding-left: 3%;
+    height: 2.38rem;
+    border-radius: 0.36rem;
+    background: #d9d9d9;
+    text-align: center;
+    outline: none;
+    border:none;
+    appearance:none;
+    -webkit-appearance:none;
+}
+.choose {
+    padding-left: 5%;
+    height: 1.19rem;
+    margin-bottom: 2.38rem;
+}
+.choose label {
+    float: left;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-right: 1.19rem;
+    font-weight: bolder;
+}
+.choose input {
+    float: left;
+    width: 1.21rem;
+    height: 1.21rem;
+    margin-right: 0.65rem;
+}
+.info button {
+    width: 100%;
+    line-height: 2.38rem;
+    background: #0c1260;
+    border-radius: 0.36rem;
+    color: white;
+    outline:none;
+    border:none;
+    font-size: 1rem;
+}
+.back {
+    display:block;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    margin: 1.79rem 0 1.55rem;
+}
+.line {
+    width:100%;
+    height:2px;
+    background:#000;
+}
+.continue {
+    display:block;
+    width: 7.14rem;
+    line-height:2.38rem;
+    border-radius: 0.36rem;
+    text-align: center;
+    margin: 1.38rem auto 0;
+    background: #d9d9d9;
+    color: #0c1260;
+    font-weight: bolder;
+}
+
+

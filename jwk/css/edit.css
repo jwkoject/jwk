@@ -32,26 +32,25 @@ html body {
     font-weight: bold;
 }
 .edit-file {
-    position: relative;
     margin: 2.62rem 0 1.67rem 0;
 }
-.edit-file label {
-    position: absolute;
-    left: 5.9rem;
-    bottom: 0;
-    display: block;
-    width: 1.45rem;
-    height: 1.45rem;
-    background: url("../images/edit_03.png") 0 0 no-repeat;
-    background-size: contain;
-}
-#imghead {
+.file-label {
+    position: relative;
     display: block;
     width: 7.14rem;
     height: 7.14rem;
     border-radius: 50%;
-}
+    background: url("../images/per_cen_11.png") 0 0 no-repeat;
+    background-size: contain;
 
+}
+.file-label input[type="file"] {
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+}
 .file-label img {
     position: absolute;
     right: 0;
@@ -61,7 +60,16 @@ html body {
     height: 7.14rem;
     border-radius: 50%;
 }
-
+.file-label span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: url("../images/edit_03.png") 0 0 no-repeat;
+    background-size: contain;
+}
 .add-main {
     margin-bottom: 0.95rem;
 }

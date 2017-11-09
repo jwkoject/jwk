@@ -103,7 +103,7 @@ html body {
     background: #0c1260;
     border-radius: 0.24rem;
 }
-.save-btn input[type="button"] {
+.save-btn input[type="button"], .save-btn input[type="submit"]{
     width: 100%;
     color: #fff;
     line-height: 2.38rem;

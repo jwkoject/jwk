@@ -24,7 +24,6 @@ $("#button").click(function() {
                 $(".password-remind").slideDown();
                 return false;
             }
-
         }
     });
 })

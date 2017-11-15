@@ -119,20 +119,20 @@ input {
     z-index: 9999;  
 }
 .picture-left-t {
-    top: 15%;
-    left: 12%;
+    top: 112px;
+    left: 28%;
 }
 .picture-left-b {
-    top: 75%;
-    left: 7%;
+    top: 337px;
+    left: 26%;
 }
 .picture-right-t {
-    top: 15%;
-    left: 65%;
+    top: 112px;
+    left: 56%;
 }
 .picture-right-b {
-    top: 75%;
-    left: 69%;
+    top: 337px;
+    left: 59%;
 }
 .picture-pos img {
     display: block;
@@ -140,20 +140,20 @@ input {
     height: 100%;
 }
 .picture-left-back-t {
-    top: 35%;
-    left: 7%;
+    top: 326px;
+    left: 21%;
 }
 .picture-left-back-b {
-    top: 75%;
-    left: 69%;
+    top: 326px;
+    left: 65%;
 }
 .picture-right-back-t {
-    top: 15%;
-    left: 12%;
+    top: 72px;
+    left: 25%;
 }
 .picture-right-back-b {
-    top: 15%;
-    left: 65%;
+    top: 72px;
+    left: 58%;
 }
 
 
@@ -197,10 +197,22 @@ input {
     }
 }
 .picture-img img {
+    position:absolute;
     display: block;
     width: 100%;
     height: auto;
     border: none;
+    backface-visibility: hidden;
+}
+
+#img-crafts{
+    z-index:1;
+}
+#img-button{
+    z-index:1;
+}
+#img-thread{
+    z-index:1;
 }
 .picture-img .picture-img-show {
     display: block;
@@ -320,8 +332,8 @@ input {
 .select-sf li {
     float: left;
     overflow: hidden;
-    width: 3rem;
-    height: 3rem;
+    width: 2.98rem;
+    height: 2.98rem;
     margin-right: 0.8rem;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;

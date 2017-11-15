@@ -61,10 +61,131 @@
             var tex = $(this).text();
             $(this).parent().parent().siblings().find(".pic-con-sf").html(tex);
         })
+        //颜色切换
         $(".select-sf-two li").click(function() {
             var src = $(this).children().attr("src");
             $(this).parent().parent().siblings().find(".pic-con-sf").find("img").attr("src", src);
+            var tag = $(this).attr("tag");
+            var de = $(this).attr("de");
+
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url:"/jwk/public/index.php/mobile/index/changeColor",
+                data:{'tag': tag},
+                async: false,
+                error: function(request) {
+                    alter("system error!");
+                },
+                success: function(data) {
+                    var img = eval("("+data+")");
+                    $("#img-color").attr("src", img.img_front);
+                    $("#img-color-back").attr("src", img.img_back);
+                    $("#img-crafts").attr("src","");
+                    var result = "";
+                    $(img.crafts).each(function(i,n){
+                        result += "<li tag=\""+ n.cid+"\"><img src=\""+n.cover_title+"\" class=\"newdow\" alt=\"\" /></li>";
+                        $("#crafts-title").attr("src",n.cover_title);
+                    });
+
+                    $(".select-sf-four").html(result);
+                    $(".newdow").click(function() {
+                        var index = $(this).parent().parent().parent().index();
+                        animateLeft();
+                    })
+                    if(de == 1){
+                        $("#img-crafts").attr("src",'');
+                        $("#crafts-title").attr("src","/jwk/public/static/mobile/images/cancel.png");
+                    }
+                    //初始化配件可选
+                    $(".li-11").attr("dat","yes");
+                    $(".li-12").attr("dat","yes");
+                    $(".li-13").attr("dat","yes");
+                    $(".li-14").attr("dat","yes");
+                    //破洞切换
+                    $(".select-sf-four li").click(function(){
+                        $(this).addClass('pic-con-show').siblings().removeClass('pic-con-show');
+                        var tag = $(this).attr("tag");
+                        $.ajax({
+                            type : "POST",
+                            url : "/jwk/public/index.php/mobile/index/changeCrafts",
+                            data : {'tag' : tag},
+                            async : false,
+                            error : function(request){
+                                alert("system error!");
+                            },
+                            success:function(data){
+                                var img = eval("("+data+")");
+                                if($.inArray("1",img.region) >= 0){
+                                    $(".picture-left-t img").attr("src","");
+                                    $(".li-11").attr("dat","not");
+                                }else{
+                                    $(".li-11").attr("dat","yes");
+                                }
+                                if($.inArray("2",img.region) >= 0){
+                                    $(".picture-right-t img").attr("src","");
+                                    $(".li-13").attr("dat","not");
+                                }else{
+                                    $(".li-13").attr("dat","yes");
+                                }
+                                if($.inArray("3",img.region) >= 0){
+                                    $(".picture-left-b img").attr("src","");
+                                    $(".li-12").attr("dat","not");
+                                }else{
+                                    $(".li-12").attr("dat","yes");
+                                }
+                                if($.inArray("4",img.region) >= 0){
+                                    $(".picture-right-b img").attr("src","");
+                                    $(".li-14").attr("dat","not");
+                                }else{
+                                    $(".li-14").attr("dat","yes");
+                                }
+                                $("#img-crafts").attr("src", img.img_crafts);
+                                $("#crafts-title").attr("src",img.img_title);
+                            }
+                        })
+                    });
+                }
+            });
         })
+        //纽扣切换
+        $(".select-sf-five li").click(function(){
+            var tag = $(this).attr("tag");
+            $.ajax({
+               type : "POST",
+                url : "/jwk/public/index.php/mobile/index/changeButton",
+                data : {'tag' : tag},
+                async : false,
+                error : function(request){
+                    alert("system error!");
+                },
+                success:function(data){
+                    var img = eval("("+data+")");//console.log(img);
+                    $("#img-button").attr("src", img.img_button);
+                    $("#button-title").attr("src",img.img_title);
+                }
+            })
+        });
+        //缝线切换
+        $(".select-sf-six li").click(function(){
+            var tag = $(this).attr("tag");
+            $.ajax({
+                type : "POST",
+                url : "/jwk/public/index.php/mobile/index/changeThread",
+                data : {'tag' : tag},
+                async : false,
+                error : function(request){
+                    alert("system error!");
+                },
+                success:function(data){
+                    var img = eval("("+data+")");
+                    $("#img-thread").attr("src", img.img_thread);
+                    $("#thread-title").attr("src",img.img_title);
+                    $("#img-thread-back").attr("src",img.img_back);
+                }
+            })
+        });
+
         // 旋转
         var roate = false;
         $(".custom-roate").click(function() {
@@ -101,6 +222,7 @@
         // 选择定制图案
         $(".custom-under-list li").click(function() {
             var dat = $(this).parent().attr("data");
+            var allow = $(this).attr("dat");
             console.log(dat)
             var index = $(this).index();
             $(".select-out-sf").attr("data", dat);
@@ -108,7 +230,7 @@
             $(".select-outer-sf").animate({
                 "left": "10rem"
             },500);
-            if(dat==1) { 
+            if(dat==1 && allow=="yes") {
                 var lefs = $(".select-under-sf").children().eq(index).css("left").split("px")[0];
                 var lengt = $(".select-under-sf").children().eq(index).find(".select-sfs").children().length;
                 $(".select-under-sf").children().eq(index).find(".select-sfs").css({
@@ -176,7 +298,7 @@
         $(".select-sfs li").click(function() {
             $(this).addClass('pic-con-show').siblings().removeClass('pic-con-show');
             var data = $(".select-out-sf").attr("data");
-            var src = $(this).children("img").attr("src");
+            var src = $(this).children("img").attr("tag");
             var index = $(".select-out-sf").attr("index");
             if(data == 1) {
                 $(".picture-img-positive").children(".picture-pos").eq(index).addClass("picture-pos-show").css("display","block").find("img").attr("src",src);
@@ -265,11 +387,20 @@
         })
         //选择区域图案
         $(".custom-under-list li").click(function(){
-            $(this).css({
-                "background-position" : "0 -2.29rem"
-            }).siblings().css({
-                "background-position" : "0 0"
-            })
+            var dat = $(this).attr("dat");
+            if(dat == 'yes'){
+                $(this).css({
+                    "background-position" : "0 -2.29rem"
+                }).siblings().css({
+                    "background-position" : "0 0"
+                })
+            }else{
+                $(this).css({
+                    "background-position" : "0 0"
+                }).siblings().css({
+                    "background-position" : "0 0"
+                })
+            }
         })
         $(".picture-sf").click(function() {
             $(".custom-under-list li").css({

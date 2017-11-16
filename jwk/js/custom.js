@@ -509,6 +509,23 @@
             startEnd = num*priceAll + parseFloat($(".postage-cust").text().split("$")[1]) - parseFloat($(".discount-cust").text().split("$")[1]);
             $(".final-price").text("$" + startEnd.toFixed(2));
         })
+        // 选择地址功能
+        $(".cust-address").click(function() {
+            $(".select-address-alert").fadeIn(300);
+        })
+        $(".select-address-outer li").click(function() {
+            $(this).addClass('selected-ch').siblings().removeClass('selected-ch');
+            var selectN = $(this).find(".select-address-name").text();
+            var selectT = $(this).find(".select-address-tele").text();
+            var selectD = $(this).find(".select-address-detail").text();
+            $(".address-name").text(selectN);
+            $(".address-tele").text(selectT);
+            $(".cust-address-detail p").text(selectD);
+            $(".select-address-alert").fadeOut(100);
+        })
+        $(".select-return").click(function() {
+            $(".select-address-alert").fadeOut(300);
+        })
         
         
         

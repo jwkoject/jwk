@@ -699,15 +699,6 @@ input {
 .settlement-sf-inner > div {
     margin-bottom: 0.36rem;
 }
-.cust-address a {
-    display: block;
-    padding: 0.62rem 0 0.62rem 5.1%;
-    -webkit-border-radius: 0.71rem;
-    -moz-border-radius: 0.71rem;
-    border-radius: 0.71rem;
-    background:  #f2f2f2 url("../images/arrow_left.png")  96.73% center no-repeat;
-    background-size: 4.08% auto;
-}
 .cust-address-all {
     margin-bottom: 0.62rem;
     font-size: 0.86rem;
@@ -717,6 +708,12 @@ input {
     margin-right: 2%;
 }
 .cust-address-detail p {
+    overflow: hidden;
+    width: 90%;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     font-size: 0.71rem;
 }
 .express-cust, .gift-card, .product-number {
@@ -878,7 +875,82 @@ input {
     margin-top: 0.12rem;
     color: #666;
 }
-
+/*选择地址样式*/
+.cust-address {
+    display: block;
+    padding: 0.62rem 0 0.62rem 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background:  #f2f2f2 url("../images/arrow_left.png")  96.73% center no-repeat;
+    background-size: 4.08% auto;
+}
+.select-address-alert {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
+.select-address {
+    display: block;
+    margin-bottom: 0.71rem;
+    padding: 0.62rem 0 0.62rem 5.1%;
+    -webkit-border-radius: 0.71rem;
+    -moz-border-radius: 0.71rem;
+    border-radius: 0.71rem;
+    background: #f2f2f2;
+}
+.select-address-detail p {
+    overflow: hidden;
+    width: 90%;
+    margin-bottom: 0.36rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 0.71rem;
+}
+.select-address-all {
+    margin-bottom: 0.62rem;
+    font-size: 0.86rem;
+    font-weight: bold;
+}
+.select-address-all span {
+    margin-right: 2%;
+}
+.select-address-outer {
+    width: 90.74%;
+    padding: 0.67rem 4.63%;
+    background: #fff;
+}
+.header-select {
+    position: relative;
+}
+.header-select h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 0.95rem;
+    line-height: 3.81rem;
+    font-weight: bold;
+}
+.selected-ch {
+    border: 0.23rem solid #ffd200;
+}
+.select-return {
+    position: absolute;
+    top: 0;
+    left: 5.1%;
+    display: block;
+    width: 4.08%;
+    height: 3.81rem;
+    background: url(../images/left.png) center center no-repeat;
+    background-size: contain;
+}
 
 
 

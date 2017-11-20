@@ -204,6 +204,7 @@
                 $(this).css({
                     "background-position" : "0 0"
                 })
+                $(".picture-img-positive img").fadeOut(800);
             } else {
                 $(".swiper-containers").addClass('rote-sf-show2').removeClass('rote-sf-show');
                     roate = false;
@@ -216,6 +217,7 @@
                 $(this).css({
                     "background-position" : "0 -2.86rem"
                 })
+                $(".picture-img-positive img").fadeIn(800);
             }
         })
         

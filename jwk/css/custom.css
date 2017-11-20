@@ -1,7 +1,7 @@
 /*定制页面样式*/
 input {
-    appearance:none;
-    -webkit-appearance:none;
+	appearance:none;
+	-webkit-appearance:none;
 }
 .picture-sf {
     overflow: hidden;
@@ -89,21 +89,19 @@ input {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .swiper-containers {
-    float: left;
-    width: 78.7%;
-    height:29rem;
-    background: #fff;
+	float: left;
+	width: 78.7%;
+	height:29rem;
+	background: #fff;
     position: relative;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 .picture-img {
-    width:100%;
+	width:100%;
     position: absolute;
     top: -10px;
     left: 0;
@@ -112,8 +110,6 @@ input {
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 .picture-img div {
     display: none;
@@ -206,12 +202,7 @@ input {
     width: 100%;
     height: auto;
     border: none;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
 }
 
 #img-crafts{
@@ -227,7 +218,7 @@ input {
     display: block;
 }
 .picture-left-sf {
-    margin-top: -0.5rem;
+	margin-top: -0.5rem;
     float: left;
 }
 .custom-right-over {
@@ -263,7 +254,7 @@ input {
     border-radius: 30px;
     background: rgba(222,225,229,0.3);
     z-index: 99;
-    box-shadow:0px 0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow:0px 0px 1px 1px rgba(0,0,0,0.1);
 
 }
 .select-under-sf, .select-under-back {
@@ -287,13 +278,13 @@ input {
     position: absolute;
     width: 17rem;
     height: 3.81rem;
-    border: 0.357rem solid rgba(239,239,239,0.3);
+	border: 0.357rem solid rgba(239,239,239,0.3);
     -webkit-border-radius: 0.71rem;
     border-radius: 0.71rem;
     background: #efefef;
     z-index: 99;
     margin-top: 0.8rem;
-    background: rgba(239,239,239,0.3);
+	background: rgba(239,239,239,0.3);
 }
 .under-right-sf {
     /*display: none;*/
@@ -305,7 +296,7 @@ input {
     background: rgba(255,255,255,0.8) url("../images/arrow.png") center center no-repeat;
     background-size: 100% auto;
     z-index: 999;
-    margin-top: 1.2rem;
+	margin-top: 1.2rem;
 }
 .under-arrow-one, .under-arrow-two, .under-arrow-three, .under-arrow-four {
     position: absolute;
@@ -353,8 +344,8 @@ input {
     color: #fff;
     line-height: 3rem;
     text-align: center;
-    font-size:1.43rem;
-    font-weight:bold;
+	font-size:1.43rem;
+	font-weight:bold;
 }
 .select-sfs {
     /*margin-top: -3.5rem;*/
@@ -417,7 +408,7 @@ input {
 }
 .picture-left-sf .pic-con-show, .select-sfs .pic-con-show {
     border: 0.23rem solid #ffd200;
-    line-height: 2.97rem;
+	line-height: 2.97rem;
 }
 .pic-con-sf img {
     display: block;
@@ -438,7 +429,7 @@ input {
     position: absolute;
     width: 15rem;
     height: 3.2rem;
-    margin-top:0.2rem;
+	margin-top:0.2rem;
 }
 .custom-under-list {
     width: 15rem;
@@ -462,9 +453,9 @@ input {
     width: 2.20rem;
     height: 2.86rem;
     margin-right: 2.78rem;
-    margin-top: 0.25rem;
-    background: url("../images/rotation.png") 0 -2.86rem no-repeat;
-    background-size: 100% 201%;
+	margin-top: 0.25rem;
+	background: url("../images/rotation.png") 0 -2.86rem no-repeat;
+	background-size: 100% 201%;
 }
 .custom-under-outer ul {
     display: none;
@@ -515,7 +506,7 @@ input {
     height: 3rem;
 }
 .custom-footer .cust-person{
-    float: right;
+	float: right;
 }
 .cust-share {
     margin: 0 4% 0 6%;
@@ -550,7 +541,7 @@ input {
     bottom: -200rem;
     width: 100%;
     z-index: 999;
-    background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.5);
 }
 .cust-share-plat{
     width: 91.8%;
@@ -604,8 +595,8 @@ input {
     background: #ffd200;
     line-height: 2.5rem;
     text-align: center;
-    font-size:1rem;
-    font-weight: bold;
+	font-size:1rem;
+	font-weight: bold;
 }
 .facebook {
     background: url("../images/facebook.png") center 0 no-repeat;
@@ -624,64 +615,64 @@ input {
     background-size: 60% auto;
 }
 .li-11 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/11.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/11.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-12 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/12.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/12.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-13 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/13.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/13.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-14 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/14.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/14.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-24 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/24.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/24.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-23 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/23.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/23.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-22 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/22.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/22.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .li-21 {
-    width:2.29rem;
-    height:2.29rem;
-    background: url("../images/21.png") no-repeat;
-    background-position: 0 0;
-    background-size:100% 201%;
+	width:2.29rem;
+	height:2.29rem;
+	background: url("../images/21.png") no-repeat;
+	background-position: 0 0;
+	background-size:100% 201%;
 }
 .white {
-    width: 100%;
-    height: 4rem;
+	width: 100%;
+	height: 4rem;
 }
 /*结算页面订单样式*/
 .settlement-sf {

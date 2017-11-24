@@ -193,6 +193,8 @@
                 "left": "10rem"
             });
             if(roate == false) {
+                $(".roate-button").css("display","none");
+                $(".roate-pocket").css("display","block");
                 $(".swiper-containers").addClass('rote-sf-show').removeClass('rote-sf-show2');
                     roate = true;
                 $(".custom-under-back2").addClass('custom-under-show').siblings().removeClass('custom-under-show');
@@ -205,6 +207,8 @@
                     "background-position" : "0 0"
                 })
             } else {
+                $(".roate-button").css("display","block");
+                $(".roate-pocket").css("display","none");
                 $(".swiper-containers").addClass('rote-sf-show2').removeClass('rote-sf-show');
                     roate = false;
                 $(".custom-under-back1").addClass('custom-under-show').siblings().removeClass('custom-under-show');
@@ -380,7 +384,11 @@
             },500);
             $(".settlement-sf").animate({
                 "bottom": "-30rem"
-            })
+            });
+            $(".custom-share-outer").fadeOut(500);
+            $(".custom-price-show").animate({
+                "bottom": "-30rem"
+            },500);
         })
         $(".cust-price,.cust-buy").click(function() {
             animateLeft();
@@ -469,8 +477,8 @@
         })
         // 增加产品数量和价格计算
         var arrP = [];
-        for(var i = 0; i < $(".price-detail-list li").length; i++) {
-            var priceA = $(".price-detail-list li").eq(i).children("em").text().split("$")[1];
+        for(var i = 0; i < $(".price-detail li").length; i++) {
+            var priceA = $(".price-detail li").eq(i).children("em").text().split("$")[1];
             arrP.push(priceA);
         }
         var priceAll = 0;
@@ -526,7 +534,24 @@
         $(".select-return").click(function() {
             $(".select-address-alert").fadeOut(300);
         })
-        
+        // 点击价格出现价格列表
+        $(".cust-price").click(function() {
+            // $(".custom-share-outer").fadeIn(500);
+            $(".custom-price-show").animate({
+                "bottom": "4rem"
+            },500)
+        })
+        // 点击增加地址
+        $(".add-address-cust").click(function() {
+            $(".add-address-wrap").css("display", "block");
+        })
+        $(".add-address-close").click(function() {
+            $(".add-address-wrap").css("display","none");
+        })
+        // 保存地址
+        $(".save-add-cust").click(function() {
+            $(".add-address-wrap").css("display","none");
+        })
         
         
         
